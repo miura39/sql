@@ -85,3 +85,22 @@ INSERT INTO products VALUES('Z3360','あったかタイツ',500,1,NULL);
 INSERT INTO products VALUES('Z6511','丈夫な靴下',600,1,NULL);
 
 COMMIT;
+
+/*今回は上記に記述したのでproducts.csvは利用しない。
+-- /* csvファイルからデータのロード*/
+-- LOAD DATA INFILE "ファイル場所指定：products.csv"
+-- INTO TABLE products FIELDS TERMINATED BY ","
+-- LINE TERMINATED BY "¥r¥n";
+-- COMMIT;
+
+/* csvファイルからデータのロード*/
+LOAD DATA INFILE "ファイル場所指定：order.csv"
+INTO TABLE order FIELDS TERMINATED BY ","
+LINE TERMINATED BY "¥r¥n";
+COMMIT;
+
+/* csvファイルからデータのロード*/
+LOAD DATA INFILE "ファイル場所指定：products.csv"
+INTO TABLE db_products FIELDS TERMINATED BY ","
+LINE TERMINATED BY "¥r¥n";
+COMMIT;
