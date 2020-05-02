@@ -14,4 +14,17 @@ CREATE TABLE products;
       unit_price      INTEGER NOT NULL
       categories      CHAR(1) NOT NULL
       related_product CHAR(5)
-)
+)ENGINE = INNODB;
+
+/*注文テーブル作成*/
+DROP TABLE IF EXISTS order;
+CREATE TABLE order
+(
+      order_date          DATE,
+      order_no            CHAR(12),
+      order_branch_no     INTEGER,
+      product_code        CHAR(5)NOT NULL,
+      quantity            INTEGER,
+      coupon_discount_fee INTEGER
+)ENGINE = INNODB;
+ALTER TABLE order ADD PRIMARY KEY(order_date,order_no,order_branch_no);
