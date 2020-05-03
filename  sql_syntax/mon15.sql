@@ -1,0 +1,10 @@
+/*商品テーブルから、商品名に「コート」が含まれる商品について、
+商品コード、商品名、単価を抽出する。*/
+SELECT
+  *
+FROM
+  products
+WHERE
+  product_name
+LIKE
+ '%コート%';
