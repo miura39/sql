@@ -1,0 +1,12 @@
+/*商品テーブルから、商品コードが「A0100」~「A0500」
+に当てはまる商品データを抽出する。記述する条件式は１つであること。*/
+SELECT
+  *
+FROM
+  products
+WHERE
+  product_code
+BETWEEN
+  'A0100'
+AND
+  'A0500';
