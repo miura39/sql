@@ -1,0 +1,10 @@
+/*注文テーブルから、商品コードが「N0501」「N1021」「0223」の
+いずれかを注文した注文データを抽出する。*/
+SELECT
+  product_name
+FROM
+  products
+WHERE
+  product_code 
+IN
+  ("N0501","N1021","N0223");

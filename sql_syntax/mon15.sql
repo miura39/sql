@@ -3,7 +3,7 @@
 SELECT
   *
 FROM
-  products
+  lf_order
 WHERE
   product_name
 LIKE
