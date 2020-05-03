@@ -3,7 +3,7 @@
 SELECT
   product_name
 FROM
-  products
+  db_products
 WHERE
   product_code 
 IN
