@@ -3,9 +3,7 @@
 の注文には、必ず注文枝番「１」の注文明細が含まれていることが保証されている。*/
 SELECT  
         DATE_FORMAT(order_date, '%Y%m') AS 年月,
-        COUNT(*) AS 注文件数,
-        order_branch_no
+        COUNT(*) AS 注文件数 
 FROM    lf_order 
 GROUP BY 
         DATE_FORMAT(order_date, '%Y%m');
-having  order_branch_no = 1
